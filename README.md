@@ -27,6 +27,20 @@ A dedicated calendar table was created to enable accurate time-intelligence calc
 
 **Relationship**
 - Calendar_Table[Date] → monthly_revenue[MonthDate]
+---
+
+## 🗄️ SQL Analysis
+
+SQL was used to extract, aggregate, and prepare revenue data before visualization.
+
+### Example: Monthly Revenue Aggregation
+```sql
+SELECT
+    DATE_TRUNC(order_date, MONTH) AS month_date,
+    SUM(revenue) AS revenue
+FROM transactions
+GROUP BY month_date
+ORDER BY month_date;
 
 ---
 
