@@ -1,52 +1,54 @@
-# Power BI Revenue & Year-over-Year Analysis
+# Business Performance & Revenue Analysis Dashboard (Power BI)
 
-## 📊 Project Overview
-This project demonstrates a complete Power BI revenue analysis workflow, including data modeling, DAX time intelligence, and business-focused dashboard design.
+## 📌 Project Overview
+This project presents an executive-level Power BI dashboard designed to analyze overall business performance through revenue trends, growth metrics, and actionable insights.
 
-The dashboard analyzes monthly revenue performance and year-over-year (YoY) growth to help stakeholders understand business trends and performance changes over time.
-
----
-
-## 🧠 Key Business Questions Answered
-- How does revenue trend over time?
-- How does current performance compare to the previous year?
-- Are there clear growth or decline patterns over time?
-
---
-
-## 🛠 Tools & Technologies
-- Power BI
-- DAX (Time Intelligence)
-- Data Modeling
-- Calendar Table Design
+The dashboard is structured to support data-driven decision-making by providing clear KPIs, time-based analysis, and summarized business recommendations.
 
 ---
 
-## 📐 Data Modeling
-A dedicated calendar table was created to enable accurate time-intelligence calculations such as YoY growth.
+## 📊 Dashboard Pages
 
-**Relationship**
-- Calendar_Table[Date] → monthly_revenue[MonthDate]
----
+### 1. Executive Overview
+- Total Revenue KPI
+- Monthly Revenue Trend
+- Revenue Growth Analysis
+- High-level performance summary
 
-## 🗄️ SQL Analysis
+### 2. Revenue Breakdown
+- Revenue by Month (seasonality analysis)
+- Revenue by Year
+- Interactive year filtering
 
-SQL was used to extract, aggregate, and prepare revenue data before visualization.
-
-### Example: Monthly Revenue Aggregation
-```sql
-SELECT
-    DATE_TRUNC(order_date, MONTH) AS month_date,
-    SUM(revenue) AS revenue
-FROM transactions
-GROUP BY month_date
-ORDER BY month_date;
+### 3. Insights & Actions
+- Key business insights derived from the data
+- Actionable recommendations based on observed trends
 
 ---
 
-## 📈 DAX Measures Used
+## 🛠 Tools & Skills Used
+- Power BI (Import mode)
+- Data modeling & relationships
+- DAX (measures for revenue and growth)
+- Time intelligence
+- Business KPI design
+- Data storytelling
 
-### Total Revenue
-```DAX
-Total Revenue =
-SUM(monthly_revenue[revenue])
+---
+
+## 📈 Key Insights
+- Revenue shows consistent growth over time with identifiable seasonal patterns.
+- Year-over-year performance indicates strong business scalability.
+- Revenue volatility highlights opportunities for operational optimization.
+
+---
+
+## 📂 Files Included
+- Power BI dashboard (.pbix)
+- Dashboard screenshots for preview
+
+---
+
+## 👤 Author
+Muluh Clinton Awah  
+Aspiring Data Analyst
